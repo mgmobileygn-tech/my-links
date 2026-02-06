@@ -2,46 +2,202 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MG Mobile Links</title>
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBZKB2HTN1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MBZKB2HTN1');
+  </script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <style>
+    :root {
+      --bg:#ffffff;
+      --text:#111;
+      --sub:#666;
+    }
+    body.dark {
+      --bg:#000;
+      --text:#fff;
+      --sub:#aaa;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      margin:0;
+      font-family:Poppins,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      justify-content:center;
+      min-height:100vh;
+      transition:.3s;
     }
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      width: 300px;
-      text-align: center;
+    .container {
+      max-width:420px;
+      width:100%;
+      padding:20px;
+      text-align:center;
     }
-    a {
-      display: block;
-      margin: 10px 0;
-      padding: 12px;
-      background: #000;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    .logo {
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      border:2px solid #ddd;
+      object-fit:cover;
+      margin:10px auto;
     }
-    a:hover {
-      opacity: 0.8;
+    body.dark .logo {border-color:#333;}
+    h1 {margin:6px 0;font-size:22px;}
+    .info {
+      font-size:13px;
+      color:var(--sub);
+      line-height:1.6;
+      margin-bottom:10px;
+    }
+    .toggle {
+      font-size:14px;
+      color:var(--sub);
+      cursor:pointer;
+      margin:12px 0;
+    }
+    .call-btn,.dir-btn {
+      display:block;
+      padding:14px;
+      margin:10px 0;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+      color:#fff;
+    }
+    .call-btn {background:#0a7cff;}
+    .dir-btn {background:#34a853;}
+
+    .social {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:14px;
+      margin:12px 0;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+    }
+    .social i {font-size:20px;width:24px;}
+    .facebook {border:2px solid #1877f2;color:#1877f2;}
+    .viber {border:2px solid #7360f2;color:#7360f2;}
+    .telegram {border:2px solid #229ed9;color:#229ed9;}
+    .tiktok {border:2px solid #000;color:#000;}
+    body.dark .tiktok {border-color:#fff;color:#fff;}
+
+    .map iframe {
+      width:100%;
+      height:260px;
+      border:0;
+      border-radius:14px;
+      margin-top:15px;
+    }
+
+    .visitor {
+      margin-top:12px;
+      font-size:13px;
+      color:var(--sub);
+    }
+    footer {
+      margin-top:15px;
+      font-size:12px;
+      color:var(--sub);
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h2>MG Mobile Repair</h2>
-    <a href="https://www.facebook.com/1DXjTnV9b5/?mibextid=wwXIfr">Facebook</a>
-    <a href="https://t.me/mgmobileygn">Telegram Channel</a>
-    <a href="https://t.me/mgmobilerepair">Telegram</a>
-    <a href="https://invite.viber.com/?g2=AQAVfiuCatcJ7U%2FDUwCiBZlqIhorYdB9qC6AwaVNNibZMz5GZIoPOqqEiFHh1kGL">Viber Channel</a>
-    <a href="https://www.tiktok.com/@mgmobileygn?_r=1&_t=ZS-93gekT7zPka">Tiktok Sale</a>
-    <a href="https://www.tiktok.com/@mgmobilerepair?_r=1&_t=ZS-93PxgYG7Qo8">Tiktok Repair</a>
+
+<div class="container">
+
+  <img src="logo.png" class="logo" alt="MG Mobile">
+
+  <h1>MG Mobile</h1>
+
+  <div class="info">
+    အမှတ် (104/105), ဗိုလ်အောင်ကျော်လမ်းနှင့် မဟာဗန္ဓုလလမ်းထောင့်<br>
+    (အောက်ဘလောက်), ကျောက်တံတားမြို့နယ်, ရန်ကုန်မြို့
   </div>
+
+  <div class="toggle" onclick="toggleDark()">🌗 Toggle Dark Mode</div>
+
+  <a class="call-btn" href="tel:09966133419">
+    📞 Call Now – 09 966 133 419
+  </a>
+
+  <a class="dir-btn" target="_blank"
+     href="https://maps.app.goo.gl/ZaW7Hy1JDHbDYMmB7">
+    📍 Get Directions
+  </a>
+
+  <a class="social facebook" href="https://www.facebook.com/1DXjTnV9b5/">
+    <i class="fa-brands fa-facebook"></i> Facebook Page
+  </a>
+
+  <a class="social viber" href="https://invite.viber.com/?g2=AQAVfiuCatcJ7U%2FDUwCiBZlqIhorYdB9qC6AwaVNNibZMz5GZIoPOqqEiFHh1kGL">
+    <i class="fa-brands fa-viber"></i> Viber Channel
+  </a>
+
+  <a class="social telegram" href="https://t.me/mgmobileygn">
+    <i class="fa-brands fa-telegram"></i> Telegram Sale Channel
+  </a>
+
+  <a class="social telegram" href="https://t.me/mgmobilerepair">
+    <i class="fa-brands fa-telegram"></i> Telegram Repair Channel
+  </a>
+
+  <a class="social tiktok" href="https://www.tiktok.com/@mgmobileygn">
+    <i class="fa-brands fa-tiktok"></i> TikTok Sale
+  </a>
+
+  <a class="social tiktok" href="https://www.tiktok.com/@mgmobilerepair">
+    <i class="fa-brands fa-tiktok"></i> TikTok Repair
+  </a>
+
+  <!-- ✅ CORRECT MAP EMBED -->
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.901248902403!2d96.1539!3d16.7746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1ec9c9e8c0c0d%3A0x9c4c7c6a4f0a7d3e!2sMG%20Mobile!5e0!3m2!1sen!2smm!4v1700000000000"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="visitor">
+    👀 Visitors: <span id="count">0</span>
+  </div>
+
+  <footer>© 2026 MG Mobile</footer>
+
+</div>
+
+<script>
+  const theme = localStorage.getItem("theme");
+  if(theme==="dark") document.body.classList.add("dark");
+
+  function toggleDark(){
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme",
+      document.body.classList.contains("dark")?"dark":"light");
+  }
+
+  let visits = localStorage.getItem("visits");
+  visits = visits ? Number(visits)+1 : 1;
+  localStorage.setItem("visits",visits);
+  document.getElementById("count").innerText = visits;
+</script>
+
 </body>
 </html>
